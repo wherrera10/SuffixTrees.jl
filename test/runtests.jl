@@ -2,10 +2,10 @@ using SuffixTrees, Test
 
 tests = [
     ("CAAAABAAAABD\$", "AAAAB"),
-    ("GEEKSFORGEEKS\$", "GEEKS"
+    ("GEEKSFORGEEKS\$", "GEEKS"),
     ("AAAAAAAAAA\$", "AAAAAAAAA"),
     ("ABCDEFG\$", ""),
-    ("ABABABA\$", "ABABA")
+    ("ABABABA\$", "ABABA"),
     ("ATCGATCGA\$", "ATCGA"),
     ("banana\$", "ana"),
     ("abcpqrabpqpq\$", "ab (or) pq"),
