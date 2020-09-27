@@ -1,5 +1,7 @@
 module SuffixTrees
 
+export Node, SuffixTree, dotraversal, getlongestrepeatedsubstring
+
 const oo = typemax(Int)
 
 """The suffix-tree's node."""
