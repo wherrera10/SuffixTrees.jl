@@ -4,7 +4,11 @@ export Node, SuffixTree, dotraversal, getlongestrepeatedsubstring
 
 const oo = typemax(Int)
 
-"""The suffix-tree's node."""
+"""
+    mutable struct Node
+The suffix-tree's node.
+Note that these are referenced not by pointer but by an index into an array of nodes.
+"""
 mutable struct Node
     children::Dict{Char, Int}
     start::Int
@@ -73,7 +77,7 @@ function walkdown!(st, currnode::Int)
     return true
 end
 
-""" entend tree by a character """
+""" extend tree by a character """
 function extendsuffixtree(st, pos)
     st.position = pos
     st.needsuffixlink = 0
