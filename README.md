@@ -2,6 +2,9 @@
 
 Julia implementation of the Ukkonen suffix tree algorithm
 
+
+<img src="">
+
 ## Functions
 
 	mutable struct Node
