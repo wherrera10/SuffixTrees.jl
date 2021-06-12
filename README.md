@@ -2,7 +2,7 @@
 
 Julia implementation of the Ukkonen suffix tree algorithm
 
-<img src="https://github.com/wherrera10/SuffixTrees.jl/blob/master/docs/src/stee.png">
+<img src="https://github.com/wherrera10/SuffixTrees.jl/blob/master/docs/src/stree.png">
 
 ## Functions
 
