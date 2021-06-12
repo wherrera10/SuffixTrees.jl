@@ -101,6 +101,24 @@ Find the longest repeated suffix of the tree
 <br /><br />
 
 ## Example
+  
+using SuffixTrees
 
+examples = [
+    ("CAAAABAAAABD\$", "AAAAB"),
+    ("GEEKSFORGEEKS\$", "GEEKS"),
+    ("AAAAAAAAAA\$", "AAAAAAAAA"),
+    ("ABCDEFG\$", ""),
+    ("ABABABA\$", "ABABA"),
+    ("ATCGATCGA\$", "ATCGA"),
+    ("banana\$", "ana"),
+    ("abcpqrabpqpq\$", "ab (or) pq"),
+    ("pqrpqpqabab\$", "ab (or) pq"),
+]
 
+println("Test Longest Repeated Substring in:\n")
+for (ex, ans) in examples
+    st = SuffixTree(test)
+    println("Check: ", getlongestrepeatedsubstring(st), " == $ans")
+end
 
