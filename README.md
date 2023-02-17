@@ -120,7 +120,7 @@ Find the longest repeated suffix of the tree
 	
 	println("Test Longest Repeated Substring in:\n")
 	for (ex, ans) in examples
-	    st = SuffixTree(test)
+	    st = SuffixTree(ex)
 	    println("Check: ", getlongestrepeatedsubstring(st), " == $ans")
 	end
 	
