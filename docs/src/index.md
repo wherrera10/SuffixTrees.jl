@@ -45,7 +45,7 @@ The SuffixTree struct.
 
     function SuffixTree(str::String)
 
-SuffixTree constructor from string. Note that the string should have a terminator character at its end, ususally '$' or '#'.
+SuffixTree constructor from string. Note that the string should have a terminator character at its end, usually '$' or '#'.
 <br /><br />
 
 
