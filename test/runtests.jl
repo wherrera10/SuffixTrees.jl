@@ -11,7 +11,7 @@ tests = [
     ("abcpqrabpqpq\$", "ab (or) pq"),
     ("pqrpqpqabab\$", "ab (or) pq"),
   	("CAAAABDAAAABD\$", "AAAABD"),
-    ("CAAAABDAAAABD", "AAA"),
+    ("CAAAABDAAAABD", "AAAABD"),
 ]
 println("Longest Repeated Substring in:\n")
 for (test, ans) in tests
