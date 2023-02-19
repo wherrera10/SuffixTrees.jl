@@ -6,24 +6,20 @@ Julia implementation of the Ukkonen suffix tree algorithm
 
 ## Functions
 
-	mutable struct Node
-	    children::Dict{Char, Int}
-	    start::Int
-	    ending::Int
-	    suffixlink::Int
-	    suffixindex::Int
-	end
+    mutable struct Node
+        children::Dict{Char,Int}
+        start::Int
+        ending::Int
+        suffixlink::Int
+        suffixindex::Int
+        Node(strt = 0, endng = oo) = new(Dict{Char,Int}(), strt, endng, 0, -1)
+    end
 
-The suffix-tree's node.
+
+The suffix-tree's node and default constructor.
+
 Note that these are referenced not by pointer but by an index into an array of nodes.
 <br /><br />
-
-   Node()
-   Node(start, ending)
-   
-Node constructors
-<br /><br />
-
 
 
 	mutable struct SuffixTree
@@ -43,9 +39,10 @@ The SuffixTree struct.
 <br /><br />
 
 
-    function SuffixTree(str::String)
+    function SuffixTree(str::String, addterminator = true, terminatorchar = Char(65129))
 
 SuffixTree constructor from string. Note that the string should have a terminator character at its end, usually '$' or '#'.
+If addterminator is true (default) and the last charactor is not a unique terminator, will add one from a Unicode page (default is '﹩').
 <br /><br />
 
 
@@ -116,6 +113,8 @@ Find the longest repeated suffix of the tree
 	    ("banana\$", "ana"),
 	    ("abcpqrabpqpq\$", "ab (or) pq"),
 	    ("pqrpqpqabab\$", "ab (or) pq"),
+	    ("CAAAABDAAAABD\$", "AAAABD"),
+            ("CAAAABDAAAABD", "AAAABD"),  # this one gets an added terminator ﹩ by default
 	]
 	
 	println("Test Longest Repeated Substring in:\n")
@@ -123,5 +122,3 @@ Find the longest repeated suffix of the tree
 	    st = SuffixTree(ex)
 	    println("Check: ", getlongestrepeatedsubstring(st), " == $ans")
 	end
-	
-
