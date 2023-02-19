@@ -42,7 +42,7 @@ The SuffixTree struct.
     function SuffixTree(str::String, addterminator = true, terminatorchar = Char(65129))
 
 SuffixTree constructor from string. Note that the string should have a terminator character at its end, usually '$' or '#'.
-If addterminator is true (default) and the last charactor is not a unique terminator, will add one from a Unicode page (default is '﹩').
+If addterminator is true (default) and the last character is not a unique terminator, will add one from a Unicode page (default is '﹩').
 <br /><br />
 
 
